@@ -1,34 +1,43 @@
-// Copyright (c) 2020 Ali Mugamai All rights reserved
+// Copyright (c) 2020 Mr. Coxall All rights reserved
 //
-// Created by: Ali Mugamai
-// Created on: oct 2022
+// Created by: Mr. Coxall
+// Created on: Sep 2020
 // This file contains the JS functions for index.html
 
-"use strict"
 /**
  * Check servie worker.
  */
-if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS20-02-05-JS/sw.js", {
-    scope: "/ICS20-02-05-JS/",
+ if (navigator.serviceWorker) {
+  navigator.serviceWorker.register("/ICS20-5-03-Js-/sw.js", {
+    scope: "/ICS20-5-03-Js-/",
   })
 }
-/**
- * This function calculates area and perimeter of rectangle.
- */
 
-function calculate() {
-  // input
-  const hours = parseInt(document.getElementById("hours_worked").value)
-  const rate = parseInt(document.getElementById("hourly_rate").value)
-  // process
-  const pay = hours * rate * 0.82
-  const taxes = hours * rate * 0.18
-  // output
-  document.getElementById("pay").innerHTML = `Your pay will be: $ ${pay.toFixed(
-    2
-  )}`
-  document.getElementById(
-    "governmentstake"
-  ).innerHTML = `Your pay will be: $ ${taxes.toFixed(2)}`
+/**
+ * This function updates the slider value.
+ */
+function updateSliderValue(valueFromSlider) {
+  document.getElementById("slider-value").innerHTML = valueFromSlider
+}
+
+/**
+ * This function displays the slider value.
+ */
+function myButtonClicked() {
+  children = document.getElementById("kids").checked
+  teenagers = document.getElementById("teens").checked
+  adult = document.getElementById("adults").checked
+
+  if (children == true) {
+    document.getElementById("answer").innerHTML =
+      "<p>you can only watch a G rated film.</p>"
+  } else if (teenagers == true) {
+    document.getElementById("answer").innerHTML =
+      "<p>you can watch a PG-13 rated film and below.</p>"
+  } else if (adult == true) {
+    document.getElementById("answer").innerHTML =
+      "<p>you can watch an R rated film!</p>"
+  } else {
+    document.getElementById("answer").innerHTML = "<p>not working</p>"
+  }
 }
