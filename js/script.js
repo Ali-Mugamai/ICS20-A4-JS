@@ -32,16 +32,8 @@ function myButtonClicked() {
 
   if (meat == true) {
     bill = 6
-    if (coke == true) {
-      bill = 8
-    }
   } else if (veggie == true) {
     bill = 4
-    if (coke == true) {
-      bill = 6
-    } else {
-      bill = 4
-    }
   } else {
     document.getElementById("answer").innerHTML = "<p>not working</p>"
   }
