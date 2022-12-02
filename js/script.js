@@ -26,14 +26,13 @@ function updateSliderValue(valueFromSlider) {
 function myButtonClicked() {
   veggie = document.getElementById("veggie").checked
   meat = document.getElementById("meat").checked
-  no = document.getElementById("no_drink").checked
-  coke = document.getElementById("coke").checked
+  const burgers = parseInt(document.getElementById("num_of_burgers").value)
   bill = 0
 
   if (meat == true) {
-    bill = 6
+    bill = burgers * 5
   } else if (veggie == true) {
-    bill = 4
+    bill = burgers * 3
   } else {
     document.getElementById("answer").innerHTML = "<p>not working</p>"
   }
