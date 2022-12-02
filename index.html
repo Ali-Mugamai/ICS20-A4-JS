@@ -11,9 +11,9 @@
     <title>My first Slider</title>
     <link
       rel="canonical"
-      href="https://Ali-Mugamai.github.io/ICS20-5-03-Js-/"
+      href="https://Ali-Mugamai.github.io/ICS20-A4-JS/"
     />
-    <link rel="manifest" href="/ICS20-5-03-Js-/manifest.webmanifest" />
+    <link rel="manifest" href="/ICS20-A4-JS/manifest.webmanifest" />
     <link rel="stylesheet" href="./css/styles.css" />
     <!-- None blocking for Lighthouse report -->
     <!-- https://stackoverflow.com/questions/32759272/how-to-load-css-asynchronously -->
@@ -64,43 +64,57 @@
         <p></p>
         <div id="radio-button-value">?</div>
         <div id="radio-buttons">
-          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="kids">
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="meat">
             <input
               checked
               class="mdl-radio__button"
-              id="kids"
+              id="meat"
               name="flash"
               type="radio"
               value="on"
             />
-            <span class="mdl-radio__label">12 or under</span>
+            <span class="mdl-radio__label">meat patty</span>
           </label>
           <label
             class="mdl-radio mdl-js-radio mdl-js-ripple-effect"
-            for="teens"
+            for="veggie"
           >
             <input
               class="mdl-radio__button"
-              id="teens"
+              id="veggie"
               name="flash"
               type="radio"
               value="off"
             />
-            <span class="mdl-radio__label">13-16</span>
+            <span class="mdl-radio__label">veggie patty</span>
           </label>
+          <p>would you like a drink?</p>
           <label
-            class="mdl-radio mdl-js-radio mdl-js-ripple-effect"
-            for="adults"
-          >
-            <input
-              class="mdl-radio__button"
-              id="adults"
-              name="flash"
-              type="radio"
-              value="off"
-            />
-            <span class="mdl-radio__label">17+</span>
-          </label>
+          class="mdl-radio mdl-js-radio mdl-js-ripple-effect"
+          for="no_drink"
+        >
+          <input
+            class="mdl-radio__button"
+            id="no_drink"
+            name="flash"
+            type="radio"
+            value="off"
+          />
+          <span class="mdl-radio__label">No</span>
+        </label>
+        <label
+        class="mdl-radio mdl-js-radio mdl-js-ripple-effect"
+        for="coke"
+      >
+        <input
+          class="mdl-radio__button"
+          id="coke"
+          name="flash"
+          type="radio"
+          value="off"
+        />
+        <span class="mdl-radio__label">coca-cola</span>
+      </label>
         </div>
         <div>
           <!-- Raised button with ripple -->

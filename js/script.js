@@ -8,8 +8,9 @@
  * Check servie worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS20-5-03-Js-/sw.js", {
-    scope: "/ICS20-5-03-Js-/",
+  navigator.serviceWorker.register("/ICS20-A4-JS/sw.js", {
+    scope: "/ICS20-A4-JS/",
+
   })
 }
 
@@ -24,20 +25,26 @@ function updateSliderValue(valueFromSlider) {
  * This function displays the slider value.
  */
 function myButtonClicked() {
-  children = document.getElementById("kids").checked
-  teenagers = document.getElementById("teens").checked
-  adult = document.getElementById("adults").checked
+  veggie = document.getElementById("veggie").checked
+  meat = document.getElementById("meat").checked
+  no = document.getElementById("no_drink").checked
+  coke = document.getElementById("coke").checked
+  bill = 0
 
-  if (children == true) {
-    document.getElementById("answer").innerHTML =
-      "<p>you can only watch a G rated film.</p>"
-  } else if (teenagers == true) {
-    document.getElementById("answer").innerHTML =
-      "<p>you can watch a PG-13 rated film and below.</p>"
-  } else if (adult == true) {
-    document.getElementById("answer").innerHTML =
-      "<p>you can watch an R rated film!</p>"
+  if (meat == true) {
+    bill = 6
+      if (coke == true) {
+        bill = 8
+      }
+  } else if (veggie == true) {
+    bill = 4
+      if (coke == true) {
+        bill = 6
+      } else {
+        bill = 4
+      }
   } else {
     document.getElementById("answer").innerHTML = "<p>not working</p>"
   }
+  document.getElementById("answer").innerHTML = "<p>your bill is" + bill + "</p>"
 }
