@@ -10,7 +10,6 @@
 if (navigator.serviceWorker) {
   navigator.serviceWorker.register("/ICS20-A4-JS/sw.js", {
     scope: "/ICS20-A4-JS/",
-
   })
 }
 
@@ -33,18 +32,19 @@ function myButtonClicked() {
 
   if (meat == true) {
     bill = 6
-      if (coke == true) {
-        bill = 8
-      }
+    if (coke == true) {
+      bill = 8
+    }
   } else if (veggie == true) {
     bill = 4
-      if (coke == true) {
-        bill = 6
-      } else {
-        bill = 4
-      }
+    if (coke == true) {
+      bill = 6
+    } else {
+      bill = 4
+    }
   } else {
     document.getElementById("answer").innerHTML = "<p>not working</p>"
   }
-  document.getElementById("answer").innerHTML = "<p>your bill is" + bill + "</p>"
+  document.getElementById("answer").innerHTML =
+    "<p>your bill is" + bill + "</p>"
 }
